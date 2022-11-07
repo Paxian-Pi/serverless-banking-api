@@ -3,3 +3,4 @@ package-lock.json
 keys_dev.js
 # Local Netlify folder
 .netlify
+/functions

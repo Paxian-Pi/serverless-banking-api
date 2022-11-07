@@ -77,7 +77,7 @@ router.get('/test-account', (req, res) => res.json({ message: "Account Works" })
 router.post('/create-account', passport.authenticate('jwt', { session: false }), (req, res) => {
 
     const { errors, isValid } = validateAccountInput(req.body)
-
+    
     // Check validation
     if (!isValid) {
         return res.status(404).json(errors)
@@ -85,6 +85,7 @@ router.post('/create-account', passport.authenticate('jwt', { session: false }),
     
     const bankAccount = new BankAccountModel({
         user: req.user.id,
+        username: req.user.fullname,
         accountNumber: req.body.accountNumber,
         transactionPIN: req.body.transactionPIN
     })
@@ -94,7 +95,7 @@ router.post('/create-account', passport.authenticate('jwt', { session: false }),
         .then(account => {
 
             // console.log(account)
-
+            
             if (account) {
                 errors.error = 'Account number already exists!'
                 return res.status(404).json(errors)
