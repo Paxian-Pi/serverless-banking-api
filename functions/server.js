@@ -76,9 +76,15 @@ mongoose.connect(db)
 // Test server
 router.get('/', (req, res) => res.json({ message: 'Welcome! The banking API' }))
 
+
+// [[redirects]]
+//     to="/.netlify/functions/server/:splat"
+//     from="/*"
+//     status=200
+
 // Use Routes
 // app.use('/.netlify/functions/server', router)
-app.use('/', router)
+app.use('/.netlify/functions/server', router)
 app.use('/api/users', users)
 app.use('/api/account', accounts)
 app.use('/api/timer', timer)
