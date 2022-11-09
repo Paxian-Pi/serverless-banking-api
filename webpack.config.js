@@ -3,8 +3,12 @@ const path = require("path")
 module.exports = {
   entry: "./src/server.js",
   output: {
-    filename: "bundled.js",
-    path: path.resolve(__dirname, "dist")
+    // filename: "bundled.js",
+    // path: path.resolve(__dirname, "dist")
+
+    path: path.resolve(__dirname, './src'), //src instead of dist
+    publicPath: '/src/', //src instead of dist
+    filename: 'main.js' //main.js instead of build.js
   },
   mode: "production",
   module: {
