@@ -78,7 +78,7 @@ router.get('/test', (req, res) => res.json({ message: 'Welcome! The banking API'
 
 // Use Routes
 // app.use('/.netlify/functions/server', router)
-app.use('/', router) 
+app.use('/', router)
 app.use('/api/users', users)
 app.use('/api/account', accounts)
 app.use('/api/timer', timer)
