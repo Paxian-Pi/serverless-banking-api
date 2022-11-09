@@ -4,7 +4,7 @@
   "description": "API for banking transactions and activities.",
   "main": "sever.js",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack ./functions/server.js -o ./dist/main.js --mode production",
     "dev": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
