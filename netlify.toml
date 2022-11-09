@@ -1,7 +1,10 @@
 [build]
-    functions = "functions"
+  base = "/"
+  publish = "dist/"
+  command  = "npm run build"
+  functions = "functions/"
 
 [[redirects]]
-    to="/.netlify/functions/server/:splat"
-    from="/*"
-    status=200
+    from = "/*"
+    to = "/index.html"
+    status = 200
