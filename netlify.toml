@@ -5,6 +5,6 @@
   functions = "functions/"
 
 [[redirects]]
-    from = "/*"
-    to = "/index.html"
-    status = 200
+    to="/.netlify/functions/server/:splat"
+    from="/*"
+    status=200
