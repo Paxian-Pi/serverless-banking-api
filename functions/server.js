@@ -13,12 +13,12 @@ const serverless = require('serverless-http')
 const port = process.env.PORT || 5000
 
 // Define Routes
-const users = require('../src/routes/users')
-const accounts = require('../src/routes/accounts')
-const timer = require('../src/routes/timer')
-const upload = require('../src/routes/fileUpload')
-const network = require('../src/routes/network')
-const gateway = require('../src/routes/gateway')
+const users = require('../functions/routes/users')
+const accounts = require('../functions/routes/accounts')
+const timer = require('../functions/routes/timer')
+const upload = require('../functions/routes/fileUpload')
+const network = require('../functions/routes/network')
+const gateway = require('../functions/routes/gateway')
 
 // Initialize app
 const app = express()
@@ -49,7 +49,7 @@ const swaggerOptions = {
             { url: `http://localhost:8888` }
         ],
     },
-    apis: [`${path.join(__dirname, '../src/routes/*.js')}`],
+    apis: [`${path.join(__dirname, '../functions/routes/*.js')}`],
 }
 
 const specs = swaggerJsDoc(swaggerOptions)
@@ -63,10 +63,10 @@ app.use(express.json())
 app.use(passport.initialize())
 
 // Passport config
-require('../src/config/passport')(passport)
+require('../functions/config/passport')(passport)
 
 // Configure Db
-const db = require('../src/config/keys').mongoURI
+const db = require('../functions/config/keys').mongoURI
 
 // Connect to MongoDB
 mongoose.connect(db)
