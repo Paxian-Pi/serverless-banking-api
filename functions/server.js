@@ -13,12 +13,12 @@ const serverless = require('serverless-http')
 const port = process.env.PORT || 5000
 
 // Define Routes
-const users = require('./routes/users')
-const accounts = require('./routes/accounts')
-const timer = require('./routes/timer')
-const upload = require('./routes/fileUpload')
-const network = require('./routes/network')
-const gateway = require('./routes/gateway')
+const users = require('../src/routes/users')
+const accounts = require('../src/routes/accounts')
+const timer = require('../src/routes/timer')
+const upload = require('../src/routes/fileUpload')
+const network = require('../src/routes/network')
+const gateway = require('../src/routes/gateway')
 
 // Initialize app
 const app = express()
