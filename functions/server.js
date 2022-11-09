@@ -46,10 +46,10 @@ const swaggerOptions = {
         },
         servers: [
             { url: 'https://serverless-banking-api.netlify.app' },
-            { url: `http://localhost:5000` }
+            { url: `http://localhost:8888` }
         ],
     },
-    apis: [`${path.join(__dirname, './routes/*.js')}`],
+    apis: [`${path.join(__dirname, '../src/routes/*.js')}`],
 }
 
 const specs = swaggerJsDoc(swaggerOptions)
