@@ -45,7 +45,7 @@ const swaggerOptions = {
             }
         },
         servers: [
-            { url: 'https://banking-api-with-nodejs.herokuapp.com' },
+            { url: 'https://serverless-banking-api.netlify.app' },
             { url: `http://localhost:5000` }
         ],
     },
