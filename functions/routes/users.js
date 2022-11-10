@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const keys = require('../config/keys')
 const passport = require('passport')
-const { randomBytes } = require('crypto')
+// const { randomBytes } = require('crypto')
 
 
 // Load Input validation
@@ -208,8 +208,8 @@ router.post('/login', (req, res) => {
  *                          $ref: '#/components/schemas/UserModel'
  */
 router.get('/all', (req, res) => {
-    
-    console.log(`API Key: ${randomBytes(16).toString('hex').toUpperCase()}`)    // Generated API key
+
+    // console.log(`API Key: ${randomBytes(16).toString('hex').toUpperCase()}`)    // Generated API key
 
     UserModel
         .find()
