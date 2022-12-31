@@ -2,10 +2,10 @@
   "name": "banking-api",
   "version": "1.0.0",
   "description": "API for banking transactions and activities.",
-  "main": "sever.js",
+  "main": "./functions/sever.js",
   "scripts": {
-    "dev": "rimraf dist && parcel client/index.html",
-    "build": "rimraf dist && netlify-lambda install && parcel build client/index.html"
+    "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
+    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda serve src"
   },
   "author": "Pax",
   "license": "ISC",

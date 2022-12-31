@@ -63,10 +63,10 @@ app.use(express.json())
 app.use(passport.initialize())
 
 // Passport config
-require('../functions/config/passport')(passport)
+require('./config/passport')(passport)
 
 // Configure Db
-const db = require('../functions/config/keys').mongoURI
+const db = require('./config/keys').mongoURI
 
 // Connect to MongoDB
 mongoose.connect(db)
@@ -86,4 +86,5 @@ app.use('/api/upload', upload)
 app.use('/api/network', network)
 app.use('/api/gateway', gateway)
 
+module.exports=app
 module.exports.handler = serverless(app)
