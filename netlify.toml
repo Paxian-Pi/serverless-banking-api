@@ -1,8 +1,11 @@
 [build]
   base = "/"
   publish = "dist/"
-  command  = "npm install && npm run build"
+  command  = "npm run build"
   functions = "functions"
+
+[context.production]
+  environment = { NODE_VERSION = "16.14.1" }
 
 [[redirects]]
     to="/.netlify/functions/server/:splat"
