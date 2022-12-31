@@ -550,7 +550,7 @@ router.post('/deposit', passport.authenticate('jwt', { session: false }), (req, 
                                 // Update current balance
                                 BankAccountModel.findOneAndUpdate(
                                     { user: req.user.id },
-                                    { $set: { balance: newBalance, bankName: 'VeeGil Bank' } },
+                                    { $set: { balance: newBalance, bankName: 'Paxian Bank' } },
                                     { new: true }
                                 ).then(done => res.json(done))
                             }
