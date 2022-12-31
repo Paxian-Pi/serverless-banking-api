@@ -4,9 +4,8 @@
   "description": "API for banking transactions and activities.",
   "main": "sever.js",
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "rimraf dist && parcel client/index.html",
+    "build": "rimraf dist && netlify-lambda install && parcel build client/index.html"
   },
   "author": "Pax",
   "license": "ISC",
@@ -16,12 +15,12 @@
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "fs": "^0.0.1-security",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.3.3",
     "multer": "^1.4.5-lts.1",
-    "netlify-cli": "^12.1.0",
+    "netlify-cli": "^8.15.4",
     "netlify-lambda": "^2.0.15",
-    "passport": "^0.5.3",
+    "passport": "^0.6.0",
     "passport-jwt": "^4.0.0",
     "serverless-http": "^3.1.0",
     "swagger-jsdoc": "^6.2.1",
@@ -29,6 +28,7 @@
     "validator": "^13.7.0"
   },
   "devDependencies": {
+    "rimraf": "3.0",
     "webpack-cli": "^4.10.0"
   }
 }
