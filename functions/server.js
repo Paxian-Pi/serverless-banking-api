@@ -13,12 +13,12 @@ const serverless = require('serverless-http')
 const port = process.env.PORT || 5000
 
 // Define Routes
-const users = require('../lambda_functions/routes/users')
-const accounts = require('../lambda_functions/routes/accounts')
-const timer = require('../lambda_functions/routes/timer')
-const upload = require('../lambda_functions/routes/fileUpload')
-const network = require('../lambda_functions/routes/network')
-const gateway = require('../lambda_functions/routes/gateway')
+const users = require('../functions/routes/users')
+const accounts = require('../functions/routes/accounts')
+const timer = require('../functions/routes/timer')
+const upload = require('../functions/routes/fileUpload')
+const network = require('../functions/routes/network')
+const gateway = require('../functions/routes/gateway')
 
 // Initialize app
 const app = express()
@@ -49,7 +49,7 @@ const swaggerOptions = {
             { url: `http://localhost:8888` }
         ],
     },
-    apis: [`${path.join(__dirname, '../lambda_functions/routes/*.js')}`],
+    apis: [`${path.join(__dirname, '../functions/routes/*.js')}`],
 }
 
 const specs = swaggerJsDoc(swaggerOptions)
