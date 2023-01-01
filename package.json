@@ -5,7 +5,7 @@
   "main": "./functions/sever.js",
   "scripts": {
     "start": "webpack",
-    "build": "netlify webpack"
+    "build": "npm run build"
   },
   "author": "Pax",
   "license": "ISC",
