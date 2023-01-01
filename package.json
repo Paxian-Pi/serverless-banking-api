@@ -5,7 +5,7 @@
   "main": "./functions/sever.js",
   "scripts": {
     "start": "webpack",
-    "build": "npm run build"
+    "build": "echo 'hello build'"
   },
   "author": "Pax",
   "license": "ISC",
