@@ -5,7 +5,7 @@
   "main": "./functions/sever.js",
   "scripts": {
     "start": "webpack",
-    "build": "echo 'hello build'"
+    "build": "gatsby build"
   },
   "author": "Pax",
   "license": "ISC",
