@@ -74,7 +74,7 @@ mongoose.connect(db)
     .catch(() => console.log('Can\'t connect to MongoDB... Please check the internet!'))
 
 // Test server
-router.get('/test', (req, res) => res.json({ message: 'Welcome! The banking API' }))
+router.get('/test', (req, res) => res.json({ message: 'Welcome! The finance API' }))
 
 // Use Routes
 // app.use('/.netlify/functions/server', router)

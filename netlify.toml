@@ -1,13 +1,14 @@
 [build]
-  base = "/"
   publish = "dist/"
   command  = "npm run build"
   functions = "functions"
 
-[context.production]
-  environment = { NODE_VERSION = "16.14.1" }
+[dev]
+  targetPort = 8080
+  publish = "/dist"
+  command = "npm run dev"
 
 [[redirects]]
-    to="/.netlify/functions/server/:splat"
     from="/*"
+    to="/.netlify/functions/server/:splat"
     status=200
