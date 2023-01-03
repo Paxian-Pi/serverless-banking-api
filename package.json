@@ -4,8 +4,8 @@
   "description": "API for banking transactions and activities.",
   "main": "./functions/sever.js",
   "scripts": {
-    "dev": "rimraf dist && parcel functions/server.js",
-    "build": "rimraf dist && netlify-lambda install && parcel build functions/server.js"
+    "dev": "rimraf dist && serve functions/server.js",
+    "build": "rimraf dist && netlify-lambda install && netlify-lambda build functions/server.js"
   },
   "author": "Pax",
   "license": "ISC",
