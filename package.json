@@ -2,7 +2,7 @@
   "name": "banking-api",
   "version": "1.0.0",
   "description": "API for banking transactions and activities.",
-  "main": "./functions/sever.js",
+  "main": "sever.js",
   "scripts": {
     "dev": "netlify-lambda serve functions/server.js",
     "build": "netlify-lambda build functions/server.js"
@@ -29,7 +29,6 @@
     "validator": "^13.7.0"
   },
   "devDependencies": {
-    "rimraf": "3.0",
     "webpack-cli": "^4.10.0"
   }
 }
