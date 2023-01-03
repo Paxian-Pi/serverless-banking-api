@@ -5,7 +5,7 @@
   "main": "sever.js",
   "scripts": {
     "start": "npm run lambda:dev",
-    "build": "netlify-lambda build functions-build"
+    "build": "netlify-lambda build functions"
   },
   "author": "Pax",
   "license": "ISC",
