@@ -5,7 +5,7 @@
   "main": "sever.js",
   "scripts": {
     "start": "npm run lambda:dev",
-    "build": "webpack --config webpack.app.production.js"
+    "build": "npm-run-all --parallel build:**"
   },
   "author": "Pax",
   "license": "ISC",
