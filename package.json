@@ -4,8 +4,8 @@
   "description": "API for banking transactions and activities.",
   "main": "sever.js",
   "scripts": {
-    "dev": "./node_modules/.bin/netlify-lambda serve src",
-    "build": "./node_modules/.bin/netlify-lambda build src"
+    "dev": "webpack",
+    "build": "netlify webpack"
   },
   "author": "Pax",
   "license": "ISC",

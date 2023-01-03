@@ -13,12 +13,12 @@ const serverless = require('serverless-http')
 const port = process.env.PORT || 5000
 
 // Define Routes
-const users = require('../functions/routes/users')
-const accounts = require('../functions/routes/accounts')
-const timer = require('../functions/routes/timer')
-const upload = require('../functions/routes/fileUpload')
-const network = require('../functions/routes/network')
-const gateway = require('../functions/routes/gateway')
+const users = require('./routes/users')
+const accounts = require('./routes/accounts')
+const timer = require('./routes/timer')
+const upload = require('./routes/fileUpload')
+const network = require('./routes/network')
+const gateway = require('./routes/gateway')
 
 // Initialize app
 const app = express()
@@ -63,10 +63,10 @@ app.use(express.json())
 app.use(passport.initialize())
 
 // Passport config
-require('../functions/config/passport')(passport)
+require('./config/passport')(passport)
 
 // Configure Db
-const db = require('../functions/config/keys').mongoURI
+const db = require('./config/keys').mongoURI
 
 // Connect to MongoDB
 mongoose.connect(db)

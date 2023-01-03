@@ -1,7 +1,9 @@
 [build]
+  publish = "dist/"
+  command  = "netlify webpack"
   functions = "functions"
 
 [[redirects]]
     from="/*"
-    to="/.netlify/src/server/:splat"
+    to="/.netlify/functions/server/:splat"
     status=200
