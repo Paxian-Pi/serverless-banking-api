@@ -5,7 +5,7 @@
   "main": "sever.js",
   "scripts": {
     "dev": "webpack",
-    "build": "netlify-lambda build functions/server.js"
+    "build": "netlify-lambda build functions"
   },
   "author": "Pax",
   "license": "ISC",
