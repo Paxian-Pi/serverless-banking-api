@@ -63,10 +63,10 @@ app.use(express.json())
 app.use(passport.initialize())
 
 // Passport config
-require('./config/passport')(passport)
+require('../functions/config/passport')(passport)
 
 // Configure Db
-const db = require('./config/keys').mongoURI
+const db = require('../functions/config/keys').mongoURI
 
 // Connect to MongoDB
 mongoose.connect(db)
