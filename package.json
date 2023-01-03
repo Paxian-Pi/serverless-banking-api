@@ -5,7 +5,7 @@
   "main": "sever.js",
   "scripts": {
     "dev": "npm serve functions/server.js",
-    "build": "npm build functions/server.js"
+    "build": "npm run build functions/server.js"
   },
   "author": "Pax",
   "license": "ISC",
